@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>version.json</file>
+    <file>resources/img/gear_spin.gif</file>
+    <file>resources/img/x.png</file>
+    <file>resources/img/check.png</file>
+</qresource>
+</RCC>

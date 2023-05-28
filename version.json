@@ -1,0 +1,7 @@
+{
+    "version": "1.0",
+    "ico": "./resources/img/<ICON>.png",
+    "company_name": "ChillAspect",
+    "product_name": "Discord LumiaBot",
+    "description": "A bot to route LumiaStream chat commands through a Discord channel."
+}

@@ -1,0 +1,3 @@
+PySide6
+discord.py
+websocket-client
