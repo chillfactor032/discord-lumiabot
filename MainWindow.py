@@ -56,6 +56,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.actionDebugOutput.triggered.connect(self.viewDebugOutput)
         self.actionSettings.triggered.connect(self.viewSettingsDialog)
         self.actionSettingsFile.triggered.connect(self.viewConfigDir)
+        self.settings_button.clicked.connect(self.viewSettingsDialog)
+        self.debug_button.clicked.connect(self.viewDebugOutput)
+        self.config_button.clicked.connect(self.viewConfigDir)
 
         # Create Debug Output Dialog but don't show it
         self.debug_dialog = DebugDialog()

@@ -57,14 +57,14 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
-    QMenu, QMenuBar, QSizePolicy, QStatusBar,
-    QWidget)
+    QMenu, QMenuBar, QPushButton, QSizePolicy,
+    QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(366, 164)
+        MainWindow.resize(366, 262)
         self.actionDebugOutput = QAction(MainWindow)
         self.actionDebugOutput.setObjectName(u"actionDebugOutput")
         self.actionSettingsFile = QAction(MainWindow)
@@ -104,6 +104,20 @@ class Ui_MainWindow(object):
         self.lumiaStatusLabel.setObjectName(u"lumiaStatusLabel")
         self.lumiaStatusLabel.setGeometry(QRect(130, 80, 231, 41))
         self.lumiaStatusLabel.setMinimumSize(QSize(0, 40))
+        self.settings_button = QPushButton(self.centralwidget)
+        self.settings_button.setObjectName(u"settings_button")
+        self.settings_button.setGeometry(QRect(10, 170, 75, 24))
+        self.debug_button = QPushButton(self.centralwidget)
+        self.debug_button.setObjectName(u"debug_button")
+        self.debug_button.setGeometry(QRect(100, 170, 75, 24))
+        self.config_button = QPushButton(self.centralwidget)
+        self.config_button.setObjectName(u"config_button")
+        self.config_button.setGeometry(QRect(190, 170, 75, 24))
+        self.line_2 = QFrame(self.centralwidget)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setGeometry(QRect(10, 150, 351, 16))
+        self.line_2.setFrameShape(QFrame.HLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -139,6 +153,9 @@ class Ui_MainWindow(object):
         self.lumiaStatusIcon.setText(QCoreApplication.translate("MainWindow", u"icon", None))
         self.discordStatusLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
         self.lumiaStatusLabel.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.settings_button.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
+        self.debug_button.setText(QCoreApplication.translate("MainWindow", u"Debug Log", None))
+        self.config_button.setText(QCoreApplication.translate("MainWindow", u"Config Dir", None))
         self.menuEdit.setTitle(QCoreApplication.translate("MainWindow", u"Edit", None))
         self.menuView.setTitle(QCoreApplication.translate("MainWindow", u"View", None))
     # retranslateUi
