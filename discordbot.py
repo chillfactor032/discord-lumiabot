@@ -35,7 +35,8 @@ class DiscordBot(discord.Client):
         """Callback function when a discord message is received"""
         if message.channel.id in self.channels:
             if len(message.content) > 0 and message.content[0] == "!":
-                self.msg_callback(message.content)
+                command = message.content[1:]
+                self.msg_callback(command)
                 if time.time()-self.last_response > DiscordBot.SecsBetweenResponses:
                     response_str = ""
                     if self.num_responses > 0:
